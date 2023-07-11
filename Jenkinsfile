@@ -10,7 +10,7 @@ pipeline{
     stages{
         stage('Build') {
             steps {
-                git branch: 'main', url: 'https://github.com/JaneSolema/COMP367-LabAssignment2'
+                git branch: 'main', url: 'https://github.com/bhavya123654/bhavithareddylab3.git'
                 
                 bat "mvn clean compile"
             }

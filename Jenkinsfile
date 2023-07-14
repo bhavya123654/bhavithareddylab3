@@ -21,5 +21,11 @@ pipeline{
 
                     }
                 }
+         stage('Build docker image') {
+                    steps {
+                    bat "docker build -t bhavitha111234/maven:v1 ."
+
+                    }
+                }
     }
 }  

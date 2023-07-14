@@ -8,12 +8,18 @@ pipeline{
     }
     
     stages{
-        stage('Build') {
+        stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/bhavya123654/bhavithareddylab3.git'
-                
-                bat "mvn clean compile"
+            checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/bhavya123654/bhavithareddylab3.git']])
+
             }
         }
+
+         stage('Build') {
+                    steps {
+                    bat "mvn clean package"
+
+                    }
+                }
     }
 }  

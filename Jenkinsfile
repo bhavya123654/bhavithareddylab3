@@ -27,5 +27,21 @@ pipeline{
 
                     }
                 }
+         stage('login to docker') {
+                    steps {
+                        withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+                           bat "docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD"
+                  
+                        }
+                   
+
+                    }
+                }
+        stage('Push docker image') {
+                    steps {
+                    bat "docker push bhavitha111234/maven:v1"
+
+                    }
+                }
     }
 }  

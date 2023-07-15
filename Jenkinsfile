@@ -45,7 +45,7 @@ pipeline{
                 }
      stage('Running Container') {
                     steps {
-                    bat "docker run -d --name my-maven-container-lab3 bhavitha111234/maven:v1"
+                    bat "docker run -d -p 8081:8080 --name my-maven-container-lab3 bhavitha111234/maven:v1"
 
                     }
                 }

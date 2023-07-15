@@ -1,5 +1,5 @@
 # Base image with Java 8
-FROM java:8
+FROM openjdk:8
 # Expose the application port
 EXPOSE 8080
 ADD /target/lab3-1.0-SNAPSHOT.jar lab3-1.0-SNAPSHOT.jar

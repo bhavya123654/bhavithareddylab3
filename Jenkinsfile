@@ -43,5 +43,11 @@ pipeline{
 
                     }
                 }
+     stage('Running Container') {
+                    steps {
+                    bat "docker run -d --name my-maven-container-lab3 bhavitha111234/maven:v1"
+
+                    }
+                }
     }
 }  

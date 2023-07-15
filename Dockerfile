@@ -7,4 +7,4 @@ ADD /target/lab3-1.0-SNAPSHOT.jar lab3-1.0-SNAPSHOT.jar
 RUN ls
 RUN pwd
 # Define the command to run the application
-CMD ["java", "-jar", "lab3-1.0-SNAPSHOT.jar"]
+CMD ["bash", "-c", "java -jar lab3-1.0-SNAPSHOT.jar && sleep 50"]

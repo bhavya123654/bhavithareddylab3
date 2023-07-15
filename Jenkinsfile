@@ -18,7 +18,7 @@ pipeline{
          stage('Build') {
                     steps {
                     bat "mvn clean package"
-                    bat "pwd"
+                    bat "cd"
                     bat "dir"
 
                     }

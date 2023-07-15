@@ -36,11 +36,19 @@
         <!-- Plugins -->
         <plugins>
             <!-- Compiler plugin -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.1.0</version> <!-- Change this to the desired version -->
-			</plugin>
+		<plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-jar-plugin</artifactId>
+	            <version>3.2.0</version>
+	            <configuration>
+	                <archive>
+	                    <manifest>
+	                        <mainClass>com.example.MainClass</mainClass>
+	                    </manifest>
+	                </archive>
+	            </configuration>
+	        </plugin>
+			
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

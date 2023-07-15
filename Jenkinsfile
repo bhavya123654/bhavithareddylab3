@@ -17,7 +17,7 @@ pipeline{
 
          stage('Build') {
                     steps {
-                    pwsh "rm -rf target/"
+                  
                     bat "mvn clean package"
                     bat "cd"
                     bat "dir"
